@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
 
@@ -14,84 +14,23 @@
 
         <section class="cards">
            
-            <div class="card" id="thwgWgPLec4">     
+           {% for item in items %}
+
+            <div class="card" id="{{item.id}}">     
                 <div class="card__image-container">
-                    <img src="assets/img/tumblr_polinomios.PNG" alt="Video Aula">
+                    <img src="assets/img/tumblr_polinomios.PNG" alt="Imagem de {{item.title}}">
                 </div>
                 <div class="card__conteudo">
-                    <p>Polinômios - 3ª série EM</p>
+                    <p>{{item.title}}</p>
                 </div>
                 <div class="card__info">
-                    <p>33 min</p>
-                    <p class="card__price">Free</p>
+                    <p>{{item.duration}}</p>
+                    <p class="card__price">{{item.price}}</p>
                 </div>
             </div>
             
-            <div class="card" id="CKdeR8P5SqY">     
-                <div class="card__image-container">
-                    <img src="assets/img/tumblr_funcoes.PNG" alt="Video Aula">
-                </div>
-                <div class="card__conteudo">
-                    <p>Funções - 1ª série EM</p>
-                </div>
-                <div class="card__info">
-                    <p>33 min</p>
-                    <p class="card__price">Free</p>
-                </div>
-            </div>
-
-            <div class="card" id="6etAnfyPJKU">     
-                <div class="card__image-container">
-                    <img src="assets/img/tumblr_matriz.PNG" alt="Video Aula">
-                </div>
-                <div class="card__conteudo">
-                    <p>Matriz - 2ª série EM</p>
-                </div>
-                <div class="card__info">
-                    <p>28 min</p>
-                    <p class="card__price">Free</p>
-                </div>
-            </div>
-
-            <div class="card" id="tZASsDi_TCo">     
-                <div class="card__image-container">
-                    <img src="assets/img/tumblr_operacoes_polinomios.PNG" alt="Video Aula">
-                </div>
-                <div class="card__conteudo">
-                    <p>Operações com Polinômios - 3ª série</p>
-                </div>
-                <div class="card__info">
-                    <p>32 min</p>
-                    <p class="card__price">Free</p>
-                </div>
-            </div>
-
-            <div class="card" id="HeuXuZd8gv4">     
-                <div class="card__image-container">
-                    <img src="assets/img/tumblr_matriz_determinantes.PNG" alt="Video Aula">
-                </div>
-                <div class="card__conteudo">
-                    <p>Matrizes e Determinantes  - 2ª série EM</p>
-                </div>
-                <div class="card__info">
-                    <p>33 min</p>
-                    <p class="card__price">Free</p>
-                </div>
-            </div>
-
-            <div class="card" id="O5uIlMUG9qY">     
-                <div class="card__image-container">
-                    <img src="assets/img/tumblr_matriz_determinantes_pt2.PNG" alt="Video Aula">
-                </div>
-                <div class="card__conteudo">
-                    <p>Matrizes e Determinantes (Parte 2) - 2ª série EM</p>
-                </div>
-                <div class="card__info">
-                    <p>8 min</p>
-                    <p class="card__price">Free</p>
-                </div>
-            </div>
-
+            {% endfor %}
+           
         </section>
 
         <div class="modal-overlay">

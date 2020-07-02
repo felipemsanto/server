@@ -3,6 +3,7 @@ const nunjucks = require('nunjucks');
 const { static } = require('express');
 
 const server = express()
+const videos = require("./data")
 
 server.use(express.static('public'))
 
@@ -17,7 +18,8 @@ server.get("/", function(req, res) {
 })
 
 server.get("/classes", function(req, res) {
-    return res.render("classes")
+
+    return res.render("classes", {items: videos })
 })
 
 server.listen(5000, function() {
