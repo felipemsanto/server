@@ -1,21 +1,17 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <title>Sobre - Francisco Ferreira</title>
+    <title>Sobre - {{ about.name }}</title>
 {% endblock %}
 
 {% block content %}
 
 
         <div id="wrapper">
-            <img src="assets/img/frank.png" alt="Francisco Ferreira">
-            <h1>Francisco Ferreira</h1>
-            <h2>Professor de Matemática</h2>
-        <p>Sempre tentando fazer o melhor para isso e aquilo, um texto ai.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec 
-            maximus.
-        </p>
-
+            <img src="{{ about.avatar_url }}" alt="{{ about.name }}">
+            <h1>{{ about.name }}</h1>
+            <h2>{{ about.role }}</h2>
+            <p>{{ about.description }}</p>
         </div> 
         
         <div id="links-footer" class="links">

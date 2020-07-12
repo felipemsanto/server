@@ -14,20 +14,15 @@ nunjucks.configure("views", {
 })
 
 server.get("/", function(req, res) {
-    const data = {
+    const about = {
         avatar_url: "assets/img/frank.png",
         name: "Francisco Ferreira",
         role: "Professor de Matemática",
         description: "Sempre tentando fazer o melhor para isso e aquilo, um texto aiLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec  maximus.",
-        link: [
-            { name: "Linkedin", url: "https://www.linkedin.com/in/felipemsanto/" },
-            { name: "Facebook", url: "https://www.facebook.com/francisco.ferreira.140" },
-            { name: "YouTube", url: "https://www.youtube.com/channel/UC2bS-aCNBs8oGBTtN7HlwMQ/featured?view_as=subscriber" }
-         ]  
     }
 
 
-    return res.render("about", {about: about})
+    return res.render("about", { about })
 })
 
 server.get("/classes", function(req, res) {
