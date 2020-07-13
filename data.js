@@ -12,7 +12,8 @@ module.exports = [
         title: "Funções - 1ª série EM",
         image: "assets/img/tumblr_funcoes.PNG",
         duration: "33 min",
-        price: "Free"
+        price: "Free",
+        featured: true
 
     },
     {
@@ -28,7 +29,8 @@ module.exports = [
         title: "Operações com Polinômios - 3ª série",
         image: "assets/img/tumblr_operacoes_polinomios.PNG",
         duration: "32 min",
-        price: "Free"
+        price: "Free",
+        featured: true
 
     },
     {
@@ -44,7 +46,8 @@ module.exports = [
         title: "Matrizes e Determinantes (Parte 2) - 2ª série EM",
         image: "assets/img/tumblr_matriz_determinantes_pt2.PNG",
         duration: "8 min",
-        price: "Free"
+        price: "Free",
+        featured: true
 
     }
     
